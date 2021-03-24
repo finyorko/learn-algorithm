@@ -3,7 +3,7 @@ def shell_sort(arr):
     # 设置初始步长
     gap = int(arr_len / 2)
     while gap > 0:
-        # 进行插入排序
+        # 其实就是按照步长进行插入排序
         for i in range(gap, arr_len):
             # 插入排序
             temp = arr[i]
