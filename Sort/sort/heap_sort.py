@@ -43,7 +43,7 @@ def heapify_recursion(arr, n, i):
         # 这里代表最大元素为子节点，需要继续对子节点维护大顶堆的性质
         arr[largest], arr[i] = arr[i], arr[largest]
         # 这里有一个递归，对处理的子节点继续处理，维护最大堆的属性
-        heapify(arr, n, largest)
+        heapify_recursion(arr, n, largest)
 
 
 # 迭代方式，维护最大堆的属性
