@@ -1,3 +1,11 @@
+# 希尔排序
+# 平均时间复杂度：O(nlogn)
+# 最好时间复杂度：O(n(logn)2)
+# 最坏时间复杂度：O(n(logn)2)
+# 空间复杂度：O(1)
+# 稳定性：不稳定
+
+
 def shell_sort(arr):
     arr_len = len(arr)
     # 设置初始步长

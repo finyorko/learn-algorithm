@@ -2,6 +2,7 @@ from sort import generate_random_list
 
 
 # 基数排序，同样利用了桶，存整数位，
+# 最低位优先
 def radix_sort_lsd(arr):
     # 计算最大值的位数，循环次数和位数保持一致
     max_value_digit = len(str(max(arr)))
@@ -11,6 +12,7 @@ def radix_sort_lsd(arr):
         print("第{}轮".format(k))
         bucket_list = [[] for i in range(10)]
         for i in arr:
+            # //为向下取整
             bucket_list[i // (10 ** k) % 10].append(i)
         for i in bucket_list:
             print(i)
@@ -25,6 +27,7 @@ def radix_sort_lsd(arr):
     return arr
 
 
+# 最高位优先
 def radix_sort_msd(arr):
     max_num = max(arr)
     # digit代表当前位数
